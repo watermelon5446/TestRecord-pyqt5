@@ -1,0 +1,6 @@
+
+mysql
+
+create table grade(stdno char(50) not null,name char(20) not null, date date not null,dateS char(20), subject char(10),score char(10));
+
+alter table grade convert to character set utf8;
