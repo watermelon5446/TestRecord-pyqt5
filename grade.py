@@ -37,6 +37,7 @@ class WindowClass(QMainWindow, form_class) :
         self.textBrowser.clear()
 
     def searchFunction(self):
+        #학번, 이름, 과목 입력 후 검색
         curs = conn.cursor(pymysql.cursors.DictCursor)
         sql = "select dateS, stdno, name, subject, score from grade where stdno = '{0}' and name = '{1}' and subject = '{2}' order by date asc".format(self.stdno_edit.text(),self.name_edit.text(),self.subject_edit.text())
         curs.execute(sql)
